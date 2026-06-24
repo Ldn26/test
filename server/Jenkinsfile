@@ -1,0 +1,51 @@
+pipeline{
+agent any 
+environment {
+      IMAGE_NAME = "sedari_backendimage"
+        CONTAINER_NAME = "sedari_backend"
+        DOCKER_REGISTRY = "" 
+} 
+  stages {
+    stage('Checkout') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/Ldn26/sedarri_kings_backend.git',
+            credentialsId: 'github-pat'
+    }
+}
+
+
+        // stage('Install Dependencies') {
+        //     steps {
+        //         sh 'npm ci'
+        //     }
+        // }
+
+        // stage('Run Tests') {
+        //     steps {
+        //         sh 'npm test || echo "No tests found"'
+        //     }
+        // }
+
+        // stage('Build Docker Image') {
+        //     steps {
+        //         sh "docker build -t $IMAGE_NAME ."
+        //     }
+        // }
+
+        // stage('Security Scan') {
+        //     steps {
+        //         sh "npm audit || echo 'Vulnerabilities found'"
+        //         sh "docker run --rm aquasec/trivy $IMAGE_NAME"
+        //     }
+        // }
+
+        // stage('Deploy') {
+        //     steps {
+        //         sh "docker stop $CONTAINER_NAME || true"
+        //         sh "docker rm $CONTAINER_NAME || true"
+        //         sh "docker run -d -p 3000:3000 --name $CONTAINER_NAME $IMAGE_NAME"
+        //     }
+        // }
+}
+ }

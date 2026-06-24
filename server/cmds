@@ -1,0 +1,6 @@
+supabase login
+
+supabase db dump --schema-only > schema.sql
+
+
+ or  pg_dump -s postgres://USER:PASSWORD@HOST:PORT/DATABASE > schema.sql
