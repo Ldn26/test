@@ -132,7 +132,7 @@ export default function Auth() {
               <div className="flex items-center gap-2 mb-1">
                 <Home className="h-5 w-5 text-amber-400" strokeWidth={2.5} />
                 <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-amber-400">
-                  Kings of Sedari
+                  TEST-haha
                 </p>
               </div>
               <h1 className="text-2xl font-extrabold text-white uppercase tracking-tight">

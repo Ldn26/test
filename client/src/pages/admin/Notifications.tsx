@@ -5,6 +5,9 @@ export default function Notifications() {
   const { data, isLoading, isSuccess } = useGetAllContacts();
   const { mutateAsync: markAsRead } = useUpdateContactStatus();
   const { mutateAsync: deleteContact } = useDeleteContact();
+  
+
+ console.log(data, isLoading, isSuccess);
 
   const contacts = data?.contacts ?? [];
   const unread = contacts.filter((c) => !c.isRead).length;

@@ -1,4 +1,4 @@
-import { ShoppingCart, User, LogOut, LayoutDashboard } from "lucide-react";
+import {  User, LogOut, LayoutDashboard } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -49,24 +49,11 @@ export const Navbar = () => {
           />
         </Link>
 
-        {/* Nav links */}
         <div className="hidden md:flex items-center gap-8">
-          <a
-            href="/#about"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            À propos
-          </a>
-          {/* <a
-            href={!user ? "/#whay" : "/notifications"}
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-    
-            >
-            {user ? "Mes Demandes" : "Pourquoi nous ?"}
-          </a> */}
+
+
         </div>
 
-        {/* Actions */}
         <div className="flex items-center gap-1">
           {user ? (
             <>
