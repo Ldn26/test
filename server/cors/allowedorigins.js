@@ -1,7 +1,7 @@
 // corsOptions.js
 const allowedOrigins = [
   "http://localhost:3000",
-   "https://test-4ybs.onrender.com"
+   "https://test-client-kajm.onrender.com/"
 
 ];
 
