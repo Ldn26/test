@@ -18,6 +18,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import UserLayout from "./components/UserLayout";
 import Notifications from "./pages/admin/Notifications";
 import ContactForm from "./pages/ContactForm";
+import Map from "./pages/Map";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +31,7 @@ const App = () => (
         <Routes>
           <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<Index />} />
+          <Route path="/map" element={<Map />} />
 
           <Route
             path="/contact"
