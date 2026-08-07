@@ -1,0 +1,31 @@
+name: push client image to dockerhub
+
+on:
+  push:
+    paths:
+      - 'client/**'
+      - '.github/workflows/client.yml'
+
+env:
+  IMAGE_NAME: yxfldn26/clientimage
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: set image tag from commit sha
+        run: echo "TAG=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
+      - name: build clientImage
+        run: docker build -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest ./client
+
+      - name: login to dockerhub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: push clientImage to dockerhub
+        run: |
+          docker push $IMAGE_NAME:$TAG
+          docker push $IMAGE_NAME:latest

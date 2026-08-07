@@ -48,3 +48,10 @@ npm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+
+
+
+
+# server/Dockerfile
+# client/Dockerfile
