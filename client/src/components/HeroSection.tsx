@@ -60,7 +60,7 @@ function HeroSection() {
             </p>
 
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-5 uppercase tracking-tight">
-              Quand L'YOUCEF <br />Rencontre<br />le Confort
+              Quand L'YOUCEF <br />BAKARI <br />le Confort
             </h1>
 
             {/* Body */}
