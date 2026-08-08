@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await api.post("/auth/logout");
+      await api.post("/api/auth/logout");
       useUserStore.getState().clearUser();
       SetAccessToken(null);
       useUserStore.getState().clearAccessToken();
