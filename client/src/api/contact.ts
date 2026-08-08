@@ -145,7 +145,7 @@ export const useCreateContact = () => {
   const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: async (payload: ContactPayload) => {
-      const res = await api.post("/contacts", payload);
+      const res = await api.post("/api/contacts", payload);
       return res.data;
     },
     onSuccess: () => {
