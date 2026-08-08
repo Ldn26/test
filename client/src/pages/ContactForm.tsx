@@ -66,7 +66,7 @@ export default function ContactForm() {
   const [nom, setNom] = useState('MONnom')
   const [prenom, setPrenom] = useState('youcef')
   const [email, setEmail] = useState('YUOCEFLAIDANI@gmail.com')
-  const [telephone, setTelephone] = useState('')
+  const [telephone, setTelephone] = useState('0606060606')
   const [motif, setMotif] = useState('visite')
   const [message, setMessage] = useState('hhh youcef sacva')
   const [jour, setJour] = useState('lundi')

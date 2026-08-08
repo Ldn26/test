@@ -15,9 +15,9 @@ export default function Auth() {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const { SetAccessToken } = useUserStore();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("youcef@gmail.com");
+  const [password, setPassword] = useState("youcef@gmail.com");
+  const [fullName, setFullName] = useState("youcef@gmail.com");
   const [activeTab, setActiveTab] = useState<"signin" | "signup">("signin");
 
   const handleSignUp = async (e: React.FormEvent) => {
