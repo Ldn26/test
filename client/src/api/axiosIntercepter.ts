@@ -1,20 +1,10 @@
 import axios from "axios";
 import useUserStore from "../store/store.js";
 
-
-
-const URL  = import.meta.env.MODE === "development" ? "http://localhost:4000" : "/api/"
-
-
 const api = axios.create({
-  baseURL: URL,
+  baseURL: import.meta.env.VITE_SERVER_URL,
   withCredentials: true,
 });
-
-
-
-
-
 
 api.interceptors.request.use(  
   (config) => {
@@ -39,7 +29,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
       try {
         const res = await axios.post(
-          `${URL}/auth/refreshToken`,
+          `${import.meta.env.VITE_SERVER_URL}/auth/refreshToken`,
           {},
           { withCredentials: true } // must be inside the request config
         );

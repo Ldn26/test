@@ -33,7 +33,7 @@ export default function Auth() {
       return;
     }
     try {
-      const res = await api.post("api/auth/register", {
+      const res = await api.post("/api/auth/register", {
         email,
         password,
         name: fullName,
