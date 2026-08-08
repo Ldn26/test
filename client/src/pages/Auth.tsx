@@ -33,7 +33,7 @@ export default function Auth() {
       return;
     }
     try {
-      const res = await api.post("auth/register", {
+      const res = await api.post("api/auth/register", {
         email,
         password,
         name: fullName,
@@ -65,7 +65,7 @@ export default function Auth() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await api.post("/auth/login", { email, password });
+      const res = await api.post("/api/auth/login", { email, password });
       SetAccessToken(res.data.accessToken);
       useUserStore.getState().setUser(res.data.user);
       useUserStore.getState().SetAccessToken(res.data.accessToken);
