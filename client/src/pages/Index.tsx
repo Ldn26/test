@@ -12,7 +12,7 @@ const [users, setUsers] = useState([]);
       onClick={async () => {
         try {
           // 10.103.74.226
-          const response = await fetch("http://99.103.74.226:4000/users");
+          const response = await fetch("http://10.108.142.73:4000/users");
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
