@@ -24,7 +24,7 @@ app.use("*", (req, res) => {
 });
 
 
-app.use("/pay", (req, res) => {
+app.get("/pay", (req, res) => {
   res.status(200).json({
     status: "success",
     message: "Payment  service work ",
