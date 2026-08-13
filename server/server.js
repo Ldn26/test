@@ -16,6 +16,13 @@ app.use(express.json({ limit: "25mb" }));
 app.use(cookieParser());
   
 app.use(router)
+
+app.use("/pay", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Payment  service work ",
+  });
+});
 app.use("*", (req, res) => {
   res.status(404).json({
     status: "fail",
@@ -24,12 +31,7 @@ app.use("*", (req, res) => {
 });
 
 
-app.get("/pay", (req, res) => {
-  res.status(200).json({
-    status: "success",
-    message: "Payment  service work ",
-  });
-});
+
 
 
 sequelize
